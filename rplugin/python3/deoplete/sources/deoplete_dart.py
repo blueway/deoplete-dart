@@ -48,7 +48,7 @@ class Source(Base):
 
         self._server = AnalysisService(
             dart_bin, dart_analysis_server, flags_string +
-            ' --sdk ' + dart_sdk_path + ' --no-error-notification')
+            ' --sdk ' + dart_sdk_path + ' ')
 
         current_file = os.path.join(context['cwd'], context['bufname'])
         if self.use_on_event and context['event'] == 'BufRead':
